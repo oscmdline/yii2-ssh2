@@ -1,5 +1,5 @@
 <?php
-namespace behnampro\yii2ssh;
+namespace oscmdline\yii2ssh;
 
 use Yii;
 use phpseclib\Net\SSH2;
@@ -45,6 +45,15 @@ class Yii2ssh extends Widget
 			$password = isset($auth['password']) ? $auth['password'] : '';
 
 			if ($this->ssh->login($username, $password))
+			{
+				$ret = true;
+			}
+		} elseif (isset($auth['key']) && isset($auth['username'])) {
+			// Login via public key authentication
+			
+			$username = $auth['username'];
+			$key = $auth['key'];
+			if ($this->ssh->login($username, $key))
 			{
 				$ret = true;
 			}
