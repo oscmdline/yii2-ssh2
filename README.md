@@ -6,9 +6,9 @@ SSH2 library for yii2
 
 Pure PHP library widget (based on phpseclib) for Yii2.
 
-modified for integrity and fix confilict with Yii2
+added public key authentication
 
-by : Behnam mirzaee
+by : oscmdline
 
 
 ## Installation
@@ -18,13 +18,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require behnampro/yii2-ssh2 "*"
+composer require oscmdline/yii2-ssh2 "*"
 ```
 
 or add
 
 ```
-"behnampro/yii2-ssh2": "*"
+"oscmdline/yii2-ssh2": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -35,7 +35,7 @@ to the require section of your `composer.json` file.
 ### Example
 
 ```
-use behnampro\yii2ssh\Yii2ssh;
+use oscmdline\yii2ssh\Yii2ssh;
 
 $yii_ssh = new Yii2ssh();
 $host = "127.0.0.1";
